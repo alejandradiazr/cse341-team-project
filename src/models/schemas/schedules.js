@@ -35,6 +35,18 @@ const scheduleSchema = new mongoose.Schema(
                 'sunday'
             ]
         },
+        months: {
+            type: [{
+                type: Number,
+                min: 1,
+                max: 12
+            }],
+            required: true,
+            validate: {
+                validator: (months) => months.length > 0,
+                message: 'At least one operating month is required.'
+            }
+        },
         status: {
             type: Boolean,
             required: true,
