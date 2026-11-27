@@ -27,3 +27,9 @@ export async function getSchedulesByTripId(tripId, month) {
         .sort({ departureTime: 1 })
         .lean();
 }
+export async function getScheduleById(scheduleId) {
+    return Schedule.findOne({
+        id: Number(scheduleId),
+        status: true
+    }).lean();
+}
