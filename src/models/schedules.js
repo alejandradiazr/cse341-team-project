@@ -14,10 +14,16 @@ export async function getSchedulesByTripId(tripId, month) {
         return [];
     }
 
-    return Schedule.find({
+    const query = {
         tripId,
         status: true
-    })
+    };
+
+    if (month) {
+        query.months = Number(month);
+    }
+
+    return Schedule.find(query)
         .sort({ departureTime: 1 })
         .lean();
 }
