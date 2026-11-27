@@ -1,0 +1,44 @@
+<%- include('./partials/header') %>
+
+<section class="bookings-admin">
+    <div class="bookings-admin-header">
+        <h1><%= title %></h1>
+        <p>View and manage the bookings submitted through Kizuna Rail.</p>
+    </div>
+
+    <div id="bookings-loading" class="bookings-state">
+        Loading bookings...
+    </div>
+
+    <div id="bookings-error" class="bookings-state bookings-error" hidden></div>
+
+    <div id="bookings-empty" class="bookings-state" hidden>
+        No bookings have been submitted yet.
+    </div>
+
+    <div id="bookings-list" class="bookings-list"></div>
+
+    <template id="booking-card-template">
+        <article class="booking-admin-card">
+            <div class="booking-admin-card-header">
+                <h2 data-field="booking-id"></h2>
+                <span data-field="booking-date"></span>
+            </div>
+
+            <div class="booking-admin-details">
+                <p><strong>Trip:</strong> <span data-field="trip-id"></span></p>
+                <p><strong>Schedule:</strong> <span data-field="schedule-id"></span></p>
+                <p><strong>Ticket Class:</strong> <span data-field="ticket-class"></span></p>
+                <p><strong>Travel Day:</strong> <span data-field="travel-day"></span></p>
+                <p><strong>Passengers:</strong> <span data-field="passenger-count"></span></p>
+            </div>
+
+            <div class="booking-admin-passengers">
+                <h3>Passenger Information</h3>
+                <ul data-field="passengers"></ul>
+            </div>
+        </article>
+    </template>
+</section>
+
+<%- include('./partials/footer') %>

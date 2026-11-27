@@ -3,6 +3,7 @@ import { trainsApi, trainsPage } from './trains.js';
 import { Router } from 'express';
 import { homePage, aboutPage, testErrorPage } from './index.js';
 import tripsApiRouter from './api-routes.js';
+import { bookingsAdminPage } from '../controllers/bookings.js';
 
 const router = Router();
 
@@ -14,6 +15,9 @@ router.get('/about', aboutPage);
 
 // Trains page
 router.get('/trains', trainsPage);
+
+// Bookings administration page
+router.get('/bookings-admin', bookingsAdminPage);
 
 // Trains API
 router.get('/api/trains', trainsApi);

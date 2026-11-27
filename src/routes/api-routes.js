@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { getAllBookings } from '../controllers/bookings.js';
 import {
     getTripById,
     getAllTrips,
@@ -97,5 +98,20 @@ router.get('/trips/:id/schedules', (req, res, next) => {
 
     return getSchedulesForTrip(req, res, next);
 });
+
+/**
+ * @swagger
+ * /api/bookings:
+ *   get:
+ *     summary: Get all bookings
+ *     description: Retrieve all bookings stored in the database.
+ *     tags: [Bookings]
+ *     responses:
+ *       200:
+ *         description: Bookings retrieved successfully.
+ *       500:
+ *         description: Failed to fetch bookings.
+ */
+router.get('/bookings', getAllBookings);
 
 export default router;

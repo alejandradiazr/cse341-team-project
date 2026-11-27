@@ -1,0 +1,99 @@
+.bookings-admin {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) 0;
+}
+
+.bookings-admin-header {
+    margin-bottom: var(--space-2xl);
+    text-align: center;
+}
+
+.bookings-admin-header h1 {
+    color: var(--clr-text-primary);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+}
+
+.bookings-admin-header p {
+    color: var(--clr-text-secondary);
+}
+
+.bookings-state {
+    padding: var(--space-lg);
+    text-align: center;
+    color: var(--clr-text-secondary);
+}
+
+.bookings-error {
+    color: var(--clr-error, #b42318);
+}
+
+.bookings-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+}
+
+.booking-admin-card {
+    padding: var(--space-xl);
+    background-color: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.booking-admin-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.booking-admin-card-header h2 {
+    color: var(--clr-primary);
+    font-size: var(--font-size-lg);
+    overflow-wrap: anywhere;
+}
+
+.booking-admin-card-header span {
+    color: var(--clr-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.booking-admin-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.booking-admin-details p {
+    color: var(--clr-text-secondary);
+    overflow-wrap: anywhere;
+}
+
+.booking-admin-details strong {
+    color: var(--clr-text-primary);
+}
+
+.booking-admin-passengers h3 {
+    margin-bottom: var(--space-md);
+    color: var(--clr-text-primary);
+}
+
+.booking-admin-passengers ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-left: var(--space-xl);
+}
+
+.booking-admin-passengers li {
+    color: var(--clr-text-secondary);
+    overflow-wrap: anywhere;
+}
